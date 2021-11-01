@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="marketing-select-retail.css">
+    <link rel="stylesheet" href="marketing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Kotler</title>
+</head>
+
+<body>
+    <div id="kotlerLogo">
+        <div id="kotlerName">
+            <h2>KOTLER</h2>
+        </div>
+        <div id="kotlerImage"></div>
+
+    </div>
+
+    <!--THE SELECT DROPDOWN MENU-->
+    <div id="selectBox">
+        <h1>Retailing Calculator</h1>
+        <form action="" id="myForm">
+            <select name="select" id="selectCalculator">
+                <option value="default">--Select Calculator--</option>
+                <option value="ATR">Acid-test ratio</option>
+                <option value="AINV">Average inventory</option>
+                <option value="BEA">Breakeven analysis</option>
+                <option value="CM">Contribution margin</option>
+                <option value="GM">Gross margin</option>
+                <option value="GMROI">Gross margin return on investment</option>
+                <option value="Inventory turnover">Inventory turnover</option>
+                <option value="Net sales">Net sales</option>
+                <option value="Open to buy">Open to buy</option>
+                <option value="SPSF">Sales per square foot</option>
+                <option value="STR">Sell-through rate</option>
+                <option value="STSR">Stock-to-sales ratio</option>
+            </select>
+        </form>
+    </div>
+    <!--THE CALCULATOR FORMS COME HERE-->
+
+    <div id="displayCalc">
+        <fieldset id="demo1">
+            <legend>
+                <div id="myLegend">
+                    <h5>Acid test ratio</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="currentAssets">Current assets:</label>
+                <input type="number" id="currAssets" oninput="acidTest()">
+                <label for="inventory">Inventory:</label>
+                <input type="number" id="inventory" oninput="acidTest()">
+                <label for="liabilities">Current liabilities:</label>
+                <input type="number" id="liaBilities" oninput="acidTest()">
+                <label for="liabilities">Acid-test ratio:</label>
+                <input type="text" id="atr" oninput="acidTest()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo2">
+            <legend>
+                <div id="myLegend">
+                    <h5>Average inventory</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="beginInventory">Beginning inventory:</label>
+                <input type="number" id="beginning" oninput="avInventory()">
+                <label for="endInventory">Ending inventory:</label>
+                <input type="number" id="ending" oninput="avInventory()">
+                <label for="aveInventory">Average inventory:</label>
+                <input type="text" id="avInv" oninput="avInventory()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo3">
+            <legend>
+                <div id="myLegend">
+                    <h5>Breakeven price</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="fixed cost">Fixed cost:</label>
+                <input type="number" id="fixedCost" oninput="breakEven()">
+                <label for="revenue">Revenue:</label>
+                <input type="number" id="revenue" oninput="breakEven()">
+                <label for="cost of goods">Cost of goods sold:</label>
+                <input type="number" id="costGoods" oninput="breakEven()">
+                <label for="Breakeven">Breakeven price:</label>
+                <input type="text" id="bep" oninput="breakEven()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo4">
+            <legend>
+                <div id="myLegend">
+                    <h5>Contribution margin</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="selling price">Selling price:</label>
+                <input type="number" id="sellingPrice" oninput="contribution()">
+                <label for="variable cost">Variable costs:</label>
+                <input type="number" id="varCost" oninput="contribution()">
+                <label for="contribution margin">Contribution margin:</label>
+                <input type="text" id="cMargin" oninput="contribution()">
+                <label for="margin percentage">Contribution margin rate:</label>
+                <input type="text" id="cmr" oninput="contribution()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+
+        <fieldset id="demo5">
+            <legend>
+                <div id="myLegend">
+                    <h5>Gross margin</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="total sales">Total sales:</label>
+                <input type="number" id="salesTotal" oninput="grossMargin()">
+                <label for="cost of goods sold">Cost of goods sold:</label>
+                <input type="number" id="goodSold" oninput="grossMargin()">
+                <label for="Gross margin">Gross margin:</label>
+                <input type="text" id="grMargin" oninput="grossMargin()">
+                <label for="Gross margin rate">Gross margin rate:</label>
+                <input type="text" id="gmr" oninput="grossMargin()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo6">
+            <legend>
+                <div id="myLegend">
+                    <h5>Gross margin ROI</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="gross margin">Gross margin:</label>
+                <input type="number" id="groMargin" oninput="grossROI()">
+                <label for="average cost">Average inventory cost:</label>
+                <input type="number" id="avInvcost" oninput="grossROI()">
+                <label for="Gross margin ROI">Gross margin ROI:</label>
+                <input type="text" id="gmROI" oninput="grossROI()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo7">
+            <legend>
+                <div id="myLegend">
+                    <h5>Inventory turnover</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="net revenue">Net revenue:</label>
+                <input type="number" id="netRevenue" oninput="invTurnover()">
+                <label for="av retail stock">Average retail stock:</label>
+                <input type="number" id="avStock" oninput="invTurnover()">
+                <label for="Turnover">Inventory turnover:</label>
+                <input type="text" id="turnOver" oninput="invTurnover()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo8">
+            <legend>
+                <div id="myLegend">
+                    <h5>Net revenue</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="gross revenue">Gross revenue:</label>
+                <input type="number" id="grossRevenue" oninput="netSales()">
+                <label for="returns">Returns:</label>
+                <input type="number" id="reTurns" oninput="netSales()">
+                <label for="refunds">Refunds:</label>
+                <input type="number" id="reFunds" oninput="netSales()">
+                <label for="net sales">Net revenue:</label>
+                <input type="text" id="netRev" oninput="netSales()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo9">
+            <legend>
+                <div id="myLegend">
+                    <h5>Open to buy</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="planned sales">Planned sales:</label>
+                <input type="number" id="plannedSales" oninput="opentoBuy()">
+                <label for="planned markdowns">Planned markdowns:</label>
+                <input type="number" id="markDowns" oninput="opentoBuy()">
+                <label for="planned ending inventory">Planned ending inventory:</label>
+                <input type="number" id="closingStock" oninput="opentoBuy()">
+                <label for="planned beginning inventory">Planned beginning inventory:</label>
+                <input type="number" id="openingStock" oninput="opentoBuy()">
+                <label for="open to buy">Open to buy:</label>
+                <input type="text" id="otb" oninput="opentoBuy()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo10">
+            <legend>
+                <div id="myLegend">
+                    <h5>Revenue per square foot</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="total net revenue">Total net revenue:</label>
+                <input type="number" id="totalnetRevenue" oninput="squareFoot()">
+                <label for="rental space squarefeet">Rental space squarefeet:</label>
+                <input type="number" id="rentalSpace" oninput="squareFoot()">
+                <label for="sales per square foot">Sales per square foot:</label>
+                <input type="text" id="spsf" oninput="squareFoot()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo11">
+            <legend>
+                <div id="myLegend">
+                    <h5>Sell-through rate</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="units sold">Units sold:</label>
+                <input type="number" id="unitSold" oninput="sellThrough()">
+                <label for="units received">Units received:</label>
+                <input type="number" id="unitsReceived" oninput="sellThrough()">
+                <label for="sell-through rate">Sell-through rate:</label>
+                <input type="text" id="str" oninput="sellThrough()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo12">
+            <legend>
+                <div id="myLegend">
+                    <h5>Stock-to-sales ratio</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="beginning inventory">Beginning inventory:</label>
+                <input type="number" id="stsBeginning" oninput="stsRatio()">
+                <label for="Goods Sold">Sold goods:</label>
+                <input type="number" id="stsSold" oninput="stsRatio()">
+                <label for="stock-to-sales">Stock-to-sales ratio:</label>
+                <input type="text" id="stsr" oninput="stsRatio()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+    </div>
+    <!--THE CALCUALTOR FORMS END HERE-->
+    <div id="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="marketing.html">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="marketing-digital.html">Digital Marketing <i class="fas fa-mobile-alt"></i></i></a></li>
+                <li><a href="">CRM<i class="fas fa-users-cog"></i></i></i></a></li>
+                <li><a href="marketing-retail.html">Retailing<i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="marketing-sales.html">Sales <i class="fas fa-funnel-dollar"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="marketing-select-retail.js"></script>
+    <script src="marketing-retail.js"></script>
+</body>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="marketing-select.css">
+    <link rel="stylesheet" href="marketing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Kotler</title>
+</head>
+
+<body>
+    <div id="kotlerLogo">
+        <div id="kotlerName">
+            <h2>KOTLER</h2>
+        </div>
+        <div id="kotlerImage"></div>
+
+    </div>
+
+    <div id="selectBox">
+        <h1>Digital Marketing Calculator</h1>
+        <form action="" id="myForm">
+            <select name="select" id="selectCalculator">
+                <option value="default">--Select Calculator--</option>
+                <option value="CTR">Click-through rate</option>
+                <option value="CPM">Cost per mille</option>
+                <option value="CPC">Cost per click</option>
+                <option value="CR">Conversion rate</option>
+                <option value="CPA">Cost per acquisition</option>
+                <option value="CPL">Cost per lead</option>
+                <option value="ECPM">Effective cost per mille</option>
+                <option value="ECPA">Effective cost per action</option>
+                <option value="ROI">Return on investment</option>
+                <option value="ROAS">Return on advert spend</option>
+                <option value="CLV">Bounce Rate</option>
+            </select>
+        </form>
+    </div>
+
+    <!--This is where the calculator will display --->
+    <div id="displayCalc">
+        <fieldset id="demo1">
+            <legend>
+                <div id="myLegend">
+                    <h5>Click-through rate</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="clicks">Number of clicks:</label>
+                <input type="number" id="numberClicks" oninput="clickThrough()">
+                <label for="views">Number of views:</label>
+                <input type="number" id="numberViews" oninput="clickThrough()">
+                <label for="CTR">Click-through rate:</label>
+                <input type="text" id="rateClick" oninput="clickThrough()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo2">
+            <legend>
+                <div id="myLegend">
+                    <h5>Cost per mille</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="advert">Cost to advertiser:</label>
+                <input type="number" id="advertCost" oninput="cpm()">
+                <label for="views">Number of views:</label>
+                <input type="number" id="cpmViews" oninput="cpm()">
+                <label for="costPer">Cost per mille:</label>
+                <input type="text" id="costperMille" oninput="cpm()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo3">
+            <legend>
+                <div id="myLegend">
+                    <h5>Cost per click</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="advert cost">Advertising cost:</label>
+                <input type="number" id="costAdvertiser" oninput="costperClick()">
+                <label for="clicks">Number of clicks:</label>
+                <input type="number" id="clickNumber" oninput="costperClick()">
+                <label for="cost-per mille">Cost per click:</label>
+                <input type="text" id="costMille" oninput="costperClick()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo4">
+            <legend>
+                <div id="myLegend">
+                    <h5>Conversion rate</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="conversion">Number of conversions:</label>
+                <input type="number" id="numberConversion" oninput="conversionRate()">
+                <label for="clicks">Number of clicks:</label>
+                <input type="number" id="clickNumber2" oninput="conversionRate()">
+                <label for="rate">Conversion rate:</label>
+                <input type="text" id="rateConversion" oninput="conversionRate()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo5">
+            <legend>
+                <div id="myLegend">
+                    <h5>Cost per acquisition</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="advert cost">Advertising cost:</label>
+                <input type="number" id="adcostCpa" oninput="cpAquisition()">
+                <label for="clicks">Number of conversions:</label>
+                <input type="number" id="conversionCpa" oninput="cpAquisition()">
+                <label for="rate">Cost per acquisition:</label>
+                <input type="text" id="cpa" oninput="cpAquisition()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo6">
+            <legend>
+                <div id="myLegend">
+                    <h5>Cost per lead</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="advert cost">Advertising cost:</label>
+                <input type="number" id="adcostCpl" oninput="cpLead()">
+                <label for="clicks">Number of leads generated:</label>
+                <input type="number" id="leadsCpl" oninput="cpLead()">
+                <label for="rate">Cost per lead:</label>
+                <input type="text" id="costPerlead" oninput="cpLead()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo7">
+            <legend>
+                <div id="myLegend">
+                    <h5>Effective cost per mille</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="advert cost">Total earning:</label>
+                <input type="number" id="totalEarning" oninput="ecpm()">
+                <label for="clicks">Total impressions:</label>
+                <input type="number" id="imPressions" oninput="ecpm()">
+                <label for="rate">Cost per lead:</label>
+                <input type="text" id="effCost" oninput="ecpm()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo8">
+            <legend>
+                <div id="myLegend">
+                    <h5>Effective cost per click</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="advert cost">Total earning:</label>
+                <input type="number" id="ecpcEarning" oninput="ecpc()">
+                <label for="clicks">Total actions:</label>
+                <input type="number" id="totalActions" oninput="ecpc()">
+                <label for="rate">Cost per lead:</label>
+                <input type="text" id="effCPC" oninput="ecpc()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo9">
+            <legend>
+                <div id="myLegend">
+                    <h5>Return on investment</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="advert cost">Total revenue:</label>
+                <input type="number" id="totalRevenue" oninput="roi()">
+                <label for="clicks">Total cost:</label>
+                <input type="number" id="totalCost" oninput="roi()">
+                <label for="rate">Return on investment:</label>
+                <input type="text" id="roInvestment" oninput="roi()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo10">
+            <legend>
+                <div id="myLegend">
+                    <h5>Return on advert spend</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="advert cost">Total revenue:</label>
+                <input type="number" id="roasRevenue" oninput="roas()">
+                <label for="clicks">Total spend:</label>
+                <input type="number" id="totalSpend" oninput="roas()">
+                <label for="rate">Unit return on advert spend:</label>
+                <input type="text" id="roasSpend" oninput="roas()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo11">
+            <legend>
+                <div id="myLegend">
+                    <h5>Bounce rate</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="advert cost">Bounced sessions:</label>
+                <input type="number" id="bouncedSessions" oninput="bounceRate()">
+                <label for="clicks">Total sessions:</label>
+                <input type="number" id="totalSessions" oninput="bounceRate()">
+                <label for="rate">Bounce rate:</label>
+                <input type="text" id="rateBounced" oninput="bounceRate()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+    </div>
+    <!--This is the fixed bottom navigation bar-->
+    <div id="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="marketing.html">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="marketing-digital.html">Digital Marketing <i class="fas fa-mobile-alt"></i></i></a></li>
+                <li><a href="">CRM <i class="fas fa-users-cog"></i></i></i></a></li>
+                <li><a href="">Advertising <i class="fas fa-ad"></i></a></li>
+                <li><a href="marketing-sales.html">Sales <i class="fas fa-funnel-dollar"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="marketing-digital.js"></script>
+    <script src="marketing-select.js"></script>
+</body>
+
+</html>

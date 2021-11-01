@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="marketing-select.css">
+    <link rel="stylesheet" href="marketing-sales.css">
+    <link rel="stylesheet" href="marketing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Kotler</title>
+</head>
+
+<body>
+    <div id="kotlerLogo">
+        <div id="kotlerName">
+            <h2>KOTLER</h2>
+        </div>
+        <div id="kotlerImage"></div>
+
+    </div>
+
+
+    <div id="selectBox">
+        <h1>Sales Calculator</h1>
+        <form action="" id="myForm">
+            <select name="select" id="selectCalculator">
+                <option value="default">--Select Calculator--</option>
+                <option value="ART">Annual revenue return</option>
+                <option value="ARPA">Average revenue per account</option>
+                <option value="QUO">Quota attainment</option>
+                <option value="WR">Win rate</option>
+                <option value="CR">Conversion rate</option>
+                <option value="SCL">Sales cycle length</option>
+                <option value="ASP">Average selling price</option>
+                <option value="APM">Average profit margin</option>
+                <option value="DS">Deal spillage</option>
+                <option value="CR">Churn rate</option>
+                <option value="NRP">Net retention percentage</option>
+                <option value="PC">Pipeline coverage</option>
+                <option value="SPROD">Sales productivity</option>
+                <option value="SGR">Sales growth</option>
+                <option value="STX">Sales tax (VAT)</option>
+                <option value="DRV">Deferred revenue</option>
+            </select>
+        </form>
+    </div>
+
+    <div id="displayCalc">
+        <fieldset id="demo1">
+            <legend>
+                <div id="myLegend">
+                    <h5>Annual recurring revenue</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="contract value">Total contract value:</label>
+                <input type="number" id="contractValue" oninput="annual()">
+                <label for="contract length">Contract duration(years):</label>
+                <input type="number" id="contractDur" oninput="annual()">
+                <label for="recurring revenue">Annual recurring revenue:</label>
+                <input type="text" id="annoRevenue" oninput="annual()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo2">
+            <legend>
+                <div id="myLegend">
+                    <h5>Av. revenue per account</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="revenue">Total revenue:</label>
+                <input type="number" id="totalRevenue" oninput="arpa()">
+                <label for="subscribers">Total subscribers:</label>
+                <input type="number" id="subscribers" oninput="arpa()">
+                <label for="av revenue">Av. revenue per account:</label>
+                <input type="text" id="avRevenue" oninput="arpa()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo3">
+            <legend>
+                <div id="myLegend">
+                    <h5>Quota attainment</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="revenue">Total revenue:</label>
+                <input type="number" id="closeDeals" oninput="salesQuota()">
+                <label for="periodic quota">Periodic quota:</label>
+                <input type="number" id="periodQuota" oninput="salesQuota()">
+                <label for="quota attained">Quota attainment:</label>
+                <input type="text" id="myQuota" oninput="salesQuota()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo4">
+            <legend>
+                <div id="myLegend">
+                    <h5>Win rate</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="won opportunities">Opportunities won:</label>
+                <input type="number" id="wonOpps" oninput="winRate()">
+                <label for="opportunities">Total opportunities:</label>
+                <input type="number" id="totalOpps" oninput="winRate()">
+                <label for="win rate">Win rate:</label>
+                <input type="text" id="rateWin" oninput="winRate()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo5">
+            <legend>
+                <div id="myLegend">
+                    <h5>Conversion rate</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="conversion">Number of conversions:</label>
+                <input type="number" id="numberConversion" oninput="conversionRate()">
+                <label for="prospects">Number of prospects:</label>
+                <input type="number" id="prospects" oninput="conversionRate()">
+                <label for="conversion rate">Conversion rate:</label>
+                <input type="text" id="rateConversion" oninput="conversionRate()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo6">
+            <legend>
+                <div id="myLegend">
+                    <h5>Sales cycle</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="total days">Total days alloted:</label>
+                <input type="number" id="totalDays" oninput="salesCycle()">
+                <label for="closed deals">Closed deals time:</label>
+                <input type="number" id="dealsCycle" oninput="salesCycle()">
+                <label for="sales cycle">Sales cycle:</label>
+                <input type="text" id="cycleSales" oninput="salesCycle()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo7">
+            <legend>
+                <div id="myLegend">
+                    <h5>Average deal size</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="sales value">Average sales value:</label>
+                <input type="number" id="salesValue" oninput="asp()">
+                <label for="deals">Total deals:</label>
+                <input type="number" id="dealTotal" oninput="asp()">
+                <label for="deal size">Average deal size:</label>
+                <input type="text" id="sizeDeal" oninput="asp()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo8">
+            <legend>
+                <div id="myLegend">
+                    <h5>Average profit margin</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="total cost">Total cost:</label>
+                <input type="number" id="totalCost" oninput="apMargin()">
+                <label for="total revenue">Total revenue:</label>
+                <input type="number" id="totalRev" oninput="apMargin()">
+                <label for="returns">Refunds or returns:</label>
+                <input type="number" id="refunds" oninput="apMargin()">
+                <label for="profit margin">Average profit margin:</label>
+                <input type="text" id="profitMargin" oninput="apMargin()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo9">
+            <legend>
+                <div id="myLegend">
+                    <h5>Deal spillage</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="pending deals">Pending deals:</label>
+                <input type="number" id="pendingDeals" oninput="spillage()">
+                <label for="closing time">Standard closing time:</label>
+                <input type="number" id="closeTime" oninput="spillage()">
+                <label for="spillover">Spill-over time:</label>
+                <input type="number" id="spillOver" oninput="spillage()">
+                <label for="spillage">Deal spillage:</label>
+                <input type="text" id="dealSpill" oninput="spillage()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+        
+        <fieldset id="demo10">
+            <legend>
+                <div id="myLegend">
+                    <h5>Churn rate</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="churn">Total churn:</label>
+                <input type="number" id="churn" oninput="churnRate()">
+                <label for="customers">Number of customers:</label>
+                <input type="number" id="customerTotal" oninput="churnRate()">
+                <label for="churn rate">Churn rate:</label>
+                <input type="text" id="rateChurn" oninput="churnRate()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo11">
+            <legend>
+                <div id="myLegend">
+                    <h5>Net retention percentage</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="renewal ARR">Renewal ARR:</label>
+                <input type="number" id="renewArr" oninput="nrp()">
+                <label for="upsell">Upsell ARR:</label>
+                <input type="number" id="upSell" oninput="nrp()">
+                <label for="churn">Churn:</label>
+                <input type="number" id="nrpChurn" oninput="nrp()">
+                <label for="renewal target">Target renewal ARR:</label>
+                <input type="number" id="targetArr" oninput="nrp()">
+                <label for="retention rate">New retention percentage:</label>
+                <input type="text" id="newRetention" oninput="nrp()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo12">
+            <legend>
+                <div id="myLegend">
+                    <h5>Pipeline coverage</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="stage two sales">Stage two sales value:</label>
+                <input type="number" id="stageTwo" oninput="pipeLine()">
+                <label for="pipeline value">Pipeline value:</label>
+                <input type="number" id="pipeValue" oninput="pipeLine()">
+                <label for="sales forecast">Forecasted sales value:</label>
+                <input type="number" id="foreCast" oninput="pipeLine()">
+                <label for="closed sales">Closed sales value:</label>
+                <input type="number" id="valClosed" oninput="pipeLine()">
+                <label for="coverage">Pipeline coverage:</label>
+                <input type="text" id="pipeCoverage" oninput="pipeLine()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo13">
+            <legend>
+                <div id="myLegend">
+                    <h5>Sales productivity rate</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="relationships">Relationship quota:</label>
+                <input type="number" id="relateQuota" oninput="prodRate()">
+                <label for="emails">Emails sent:</label>
+                <input type="number" id="emailSent" oninput="prodRate()">
+                <label for="meetings">Meetings:</label>
+                <input type="number" id="meeTings" oninput="prodRate()">
+                <label for="calls">Calls:</label>
+                <input type="number" id="calLs" oninput="prodRate()">
+                <label for="other engagements">Other engagement:</label>
+                <input type="number" id="otherEng" oninput="prodRate()">
+                <label for="productivity rate">Sales productivity rate:</label>
+                <input type="text" id="salesProd" oninput="prodRate()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo14">
+            <legend>
+                <div id="myLegend">
+                    <h5>Sales growth rate</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="current period">Current period sales:</label>
+                <input type="number" id="currSales" oninput="salesGrowth()">
+                <label for="prior period">Prior period sales:</label>
+                <input type="number" id="priorSales" oninput="salesGrowth()">
+                <label for="growth rate">Sales growth rate:</label>
+                <input type="text" id="growthRate" oninput="salesGrowth()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo15">
+            <legend>
+                <div id="myLegend">
+                    <h5>Sales tax</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="sales value">Sales value:</label>
+                <input type="number" id="vatSales" oninput="salesTax()">
+                <label for="VAT rate">Value-added tax rate:</label>
+                <input type="number" id="vatRate" oninput="salesTax()">
+                <label for="sales tax">Sales tax:</label>
+                <input type="text" id="tax" oninput="salesTax()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+
+        <fieldset id="demo16">
+            <legend>
+                <div id="myLegend">
+                    <h5>Deferred revenue</h5>
+                </div>
+            </legend>
+            <form action="">
+                <label for="prepaid">Prepaid subscribers:</label>
+                <input type="number" id="numPrepaid" oninput="defRevenue()">
+                <label for="prepayment">Average prepayment amount:</label>
+                <input type="number" id="avAmount" oninput="defRevenue()">
+                <label for="defer">Deferred revenue:</label>
+                <input type="text" id="revenueDefer" oninput="defRevenue()">
+                <input type="reset" value="Reset" id="reset">
+            </form>
+        </fieldset>
+    </div>
+    <!--This is the fixed bottom navigation bar-->
+    <div id="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="marketing.html">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="marketing-digital.html">Digital Marketing <i class="fas fa-mobile-alt"></i></i></a></li>
+                <li><a href="">CRM<i class="fas fa-users-cog"></i></i></i></a></li>
+                <li><a href="marketing-retail.html">Retailing<i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="marketing-sales.html">Sales <i class="fas fa-funnel-dollar"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="marketing-select.js"></script>
+    <script src="marketing-sales.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="marketing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Kotler</title>
+</head>
+
+<body>
+    <div id="kotlerLogo">
+        <div id="kotlerName">
+            <h2>Kotler</h2>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div id="content">
+            <h2>Make quick marketing analysis and save time.</h2>
+            <p>Are you trying to figure out how to plug in your figures to better inform your customers?
+                This calculator has you covered.
+            </p>
+        </div>
+        <div id="content"></div>
+        <div id="content"></div>
+        <div id="content">
+            <h2>Get your marketing numbers ready for some mathematical exploration.</h2>
+            <p>Simply input, increase or decrease them, then simulate different scenarios, to know the best
+                decision to make.
+            </p>
+        </div>
+        <div id="content">
+            <h2>Obtain the best mathematical insights about your marketing KPIs.</h2>
+            <p>With preset marketing KPIs, you can determine what blend of numbers would produce the best results
+                for your business.
+            </p>
+        </div>
+        <div id="content"></div>
+        <div id="lastContent">
+            <h1>Try the demo. It's fast.</h1>
+
+            <fieldset id="demo">
+                <legend>
+                    <div id="myLegend">
+                        <h5>Conversion Rate</h5>
+                    </div>
+                </legend>
+                <form action="">
+                    <label for="conversion">Number of conversions:</label>
+                    <input type="number" name="conversions" id="conVersions" oninput="conversionRate()">
+                    <label for="clicks">Number of clicks:</label>
+                    <input type="number" name="clicks" id="numberClicks" oninput="conversionRate()">
+                    <label for="rate">Conversion rate:</label>
+                    <input type="text" name="rate" id="convertRate" oninput="conversionRate()">
+                    <input type="reset" value="Reset" id="reset">
+                </form>
+            </fieldset>
+
+            <fieldset id="demo">
+                <legend>
+                    <div id="myLegend">
+                        <h5>Effective Cost Per Mille</h5>
+                    </div>
+                </legend>
+                <form action="">
+                    <label for="advertiser">Total Earnings:</label>
+                    <input type="number" name="total earning" id="totalEarning" oninput="effCost()">
+                    <label for="clicks">Number of impressions:</label>
+                    <input type="number" name="impressions" id="imPressions" oninput="effCost()">
+                    <label for="rate">Effective cost per mille:</label>
+                    <input type="text" name="ecpm" id="ecPm" oninput="effCost()">
+                    <input type="reset" value="Reset" id="reset">
+                </form>
+            </fieldset>
+        </div>
+    </div>
+
+    <div id="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="marketing.html">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="marketing-digital.html">Digital Marketing <i class="fas fa-mobile-alt"></i></i></a></li>
+                <li><a href="">SWOT<i class="fas fa-users-cog"></i></i></i></a></li>
+                <li><a href="marketing-retail.html">Retailing<i class="fas fa-ad"></i></a></li>
+                <li><a href="marketing-sales.html">Sales <i class="fas fa-funnel-dollar"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="marketing.js"></script>
+</body>
+
+</html>

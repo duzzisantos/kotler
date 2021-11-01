@@ -1,0 +1,414 @@
+body {
+  background-color: white;
+  font-family: "Rubik", sans-serif;
+}
+
+#kotlerLogo {
+  color: white;
+  background-color: #29a177;
+  font-size: 25px;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+}
+
+#kotlerName {
+  height: 100px;
+  width: 200px;
+  display: inline-block;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#kotlerName h2 {
+  justify-items: center;
+  align-items: center;
+  padding-top: -50%;
+  margin-left: 10%;
+  display: inline-block;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 10px;
+}
+
+#kotlerName i {
+  display: inline-block;
+  color: white;
+}
+
+#navbar {
+  height: 60px;
+  width: 99%;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  bottom: 0px;
+  scroll-behavior: smooth;
+}
+
+nav {
+  height: 50px;
+  width: 99%;
+  /* border: 1px solid yellow; */
+  position: fixed;
+  bottom: 0px;
+  /* border-top: 5px solid #b5d8cc96; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 1;
+  overflow: hidden;
+  background-color: white;
+}
+nav li {
+  display: inline-block;
+  text-decoration-line: none;
+  font-size: 14px;
+  margin: 35px;
+  margin-top: 0px;
+}
+
+nav li:nth-child(1) {
+  margin-left: 19%;
+}
+
+a {
+  display: inline-block;
+  text-decoration-line: none;
+  color: #858585;
+}
+
+a:hover {
+  color: black;
+}
+
+.row {
+  height: 2000px;
+  width: 100%;
+  padding-top: 130px;
+  background-color: white;
+}
+
+#content {
+  height: 450px;
+  width: 600px;
+  display: inline-block;
+  /* border: 1px solid yellow; */
+  margin-left: 40px;
+  margin-top: 4px;
+  overflow: hidden;
+  color: #29a177d2;
+  font-size: 30px;
+  text-align: center;
+}
+
+#content h2,
+#content h4 {
+  line-height: 10vh;
+}
+
+#content:nth-child(2) {
+  background-image: url("content2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#content:nth-child(3) {
+  background-image: url("content3.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#content:nth-child(6) {
+  background-image: url("content6.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#lastContent {
+  background-color: #29a177d2;
+  height: 590px;
+  width: 100%;
+}
+
+#lastContent h1 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+#demo {
+  height: 360px;
+  width: 535px;
+  border: 1px solid #b5d8cc96;
+  border-radius: 50px;
+  display: inline-block;
+  margin-top: -40px;
+  margin: 50px;
+  overflow: hidden;
+}
+
+#myLegend {
+  height: 80px;
+  width: 80px;
+  border: 3px solid #b5d8cc96;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
+
+#demo input {
+  padding: 12px;
+  width: 450px;
+  display: block;
+  border-radius: 50px;
+  border: 1px solid #b5d8cc96;
+  outline: none;
+  margin-left: 30px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  background-color: #b5d8cc00;
+  color: white;
+}
+
+label {
+  margin-bottom: 10px;
+  margin-left: 30px;
+  color: #1e312ace;
+}
+
+#demo #reset {
+  padding: 12px;
+  width: 100px;
+  background-color: none;
+  margin-left: 30px;
+  border: 1px solid white;
+  border-radius: 50px;
+  outline: none;
+  color: white;
+}
+
+#demo #reset:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/*RESPONSIVENESS MOBILE PHONES*/
+
+@media only screen and (max-width: 500px) {
+  .row {
+    width: 100%;
+  }
+
+  #content,
+  #content:nth-child(2) {
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    margin-left: 5px;
+    margin-top: 4px;
+    overflow: hidden;
+    color: #29a177d2;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #content:nth-child(3) {
+    display: none;
+  }
+
+  #lastContent {
+    width: 500px;
+    height: 1000px;
+    display: block;
+  }
+
+  #demo {
+    height: 300px;
+    width: 350px;
+  }
+
+  #demo input {
+    width: 70%;
+    padding: 5px;
+  }
+
+  #kotlerLogo {
+    width: 500px;
+  }
+
+  nav li {
+    margin: 5px;
+    font-size: 14px;
+    margin-left: 0px;
+  }
+
+  nav li:nth-child(1) {
+    margin-left: 1px;
+  }
+
+  #demo #reset {
+    padding: 6px;
+  }
+}
+
+/*RESPONSIVENESS TABLETS*/
+
+@media only screen and (min-width: 768px) {
+  .row {
+    width: 100%;
+  }
+
+  #content {
+    display: inline-block;
+    width: 100%;
+    height: 450px;
+    margin-left: 10px;
+    margin-top: 4px;
+    overflow: hidden;
+    color: #29a177d2;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #content:nth-child(3) {
+    display: none;
+  }
+
+  #lastContent {
+    width: 768px;
+    height: 950px;
+    display: block;
+  }
+
+  #demo {
+    height: 320px;
+    width: 450px;
+    margin-left: 140px;
+    display: block;
+  }
+
+  #demo input {
+    width: 85%;
+    padding: 7px;
+  }
+
+  #kotlerLogo {
+    width: 768px;
+  }
+
+  nav li {
+    margin: 5px;
+    font-size: 14px;
+    margin-left: 25px;
+  }
+
+  nav li:nth-child(1) {
+    margin-left: 90px;
+  }
+
+  #demo #reset {
+    padding: 6px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+    .row {
+        height: 2000px;
+        width: 100%;
+        padding-top: 130px;
+        background-color: white;
+      }
+      
+      #content {
+        height: 450px;
+        width: 600px;
+        display: inline-block;
+        /* border: 1px solid yellow; */
+        margin-left: 40px;
+        margin-top: 4px;
+        overflow: hidden;
+        color: #29a177d2;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      #content:nth-child(3){
+          display: inline-block;
+      }
+
+  #lastContent {
+    background-color: #29a177d2;
+    height: 590px;
+    width: 100%;
+  }
+  
+  #lastContent h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+    color: white;
+  }
+  
+  #demo {
+    height: 360px;
+    width: 535px;
+    border: 1px solid #b5d8cc96;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: -40px;
+    margin: 50px;
+    overflow: hidden;
+  }
+
+  #demo input {
+    width: 85%;
+    padding: 7px;
+  }
+
+  #kotlerLogo {
+    color: white;
+    background-color: #29a177;
+    font-size: 25px;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+  }
+
+  
+nav {
+    height: 50px;
+    width: 99%;
+    /* border: 1px solid yellow; */
+    position: fixed;
+    bottom: 0px;
+    /* border-top: 5px solid #b5d8cc96; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+    background-color: white;
+  }
+  nav li {
+    display: inline-block;
+    text-decoration-line: none;
+    font-size: 17px;
+    margin: 35px;
+    margin-top: 0px;
+  }
+  
+  nav li:nth-child(1) {
+    margin-left: 19%;
+  }
+
+  #demo #reset {
+    padding: 12px;
+  }
+}

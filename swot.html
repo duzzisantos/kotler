@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="swot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Kotler</title>
+</head>
+
+<body>
+    <div id="kotlerLogo">
+        <div id="kotlerName">
+            <h2>Kotler</h2>
+        </div>
+
+    </div>
+
+    <section class="container">
+        <div class="wrapper"> <!-----ADD ANOTHER DIV BEFORE "#strength" TO SHOW THE ORDER OF INPUT ENTRY, TO CORRESPOND WITH JS PARAMETERS-->
+            <div id="strength">
+                <form action="" name="form1">
+                    <h3>STRENGTHS</h3>
+                    <input type="text" placeholder="Strength 1" id="strengthInput1">
+                    <input type="text" placeholder="Strength 2" id="strengthInput2">
+                    <input type="text" placeholder="Strength 3" id="strengthInput3">
+                    <input type="text" placeholder="Strength 4" id="strengthInput4">
+                    <input type="text" placeholder="Strength 5" id="strengthInput5">
+                </form>
+            </div>
+            <div id="weakness">
+                <form action="" name="form2">
+                    <h3>WEAKNESSES</h3>
+                    <input type="text" placeholder="Weakness 1" id="weaknessInput1">
+                    <input type="text" placeholder="Weakness 2" id="weaknessInput2">
+                    <input type="text" placeholder="Weakness 3" id="weaknessInput3">
+                    <input type="text" placeholder="Weakness 4" id="weaknessInput4">
+                    <input type="text" placeholder="Weakness 5" id="weaknessInput5">
+                </form>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div id="opportunities">
+                <form action="" name="form3">
+                    <h3>OPPORTUNITIES</h3>
+                    <input type="text" placeholder="Opportunity 1" id="opportunityInput1">
+                    <input type="text" placeholder="Opportunity 2" id="opportunityInput2">
+                    <input type="text" placeholder="Opportunity 3" id="opportunityInput3">
+                    <input type="text" placeholder="Opportunity 4" id="opportunityInput4">
+                    <input type="text" placeholder="Opportunity 5" id="opportunityInput5">
+                </form>
+            </div>
+            <div id="so">
+                <h5>S-O strategies</h5><button id="soBtn" type="button">Run</button>
+            </div>
+            <div id="wo">
+                <h5>W-O strategies</h5><button id="woBtn" type="button">Run</button>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div id="threats">
+                <form action="" name="form4">
+                    <h3>THREATS</h3>
+                    <input type="text" placeholder="Threat 1" id="threatInput1">
+                    <input type="text" placeholder="Threat 2" id="threatInput2">
+                    <input type="text" placeholder="Threat 3" id="threatInput3">
+                    <input type="text" placeholder="Threat 4" id="threatInput4">
+                    <input type="text" placeholder="Threat 5" id="threatInput5">
+                </form>
+            </div>
+            <div id="st">
+                <h5>S-T strategies</h5><button id="stBtn" type="button">Run</button>
+            </div>
+            <div id="wt">
+                <h5>W-T strategies</h5> <button id="wtBtn" type="button">Run</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="marketing.html">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="marketing-digital.html">Digital Marketing <i class="fas fa-mobile-alt"></i></i></a></li>
+                <li><a href="swot.html">SWOT<i class="fas fa-users-cog"></i></i></i></a></li>
+                <li><a href="marketing-retail.html">Retailing<i class="fas fa-ad"></i></a></li>
+                <li><a href="marketing-sales.html">Sales <i class="fas fa-funnel-dollar"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+<script src="swot.js"></script>
+</html>
