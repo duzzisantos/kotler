@@ -1,7 +1,5 @@
 # Kotler
 
-##
-
 Kotler analyzes marketing numbers and performs SWOT analsysis for the generation of alternative strategies.
 This app enables users to manipulate marketing data (number and text) in the areas of retailing, digital marketing, sales,
 and marketing strategy. The marketing strategy simulator takes inspiration from the SWOT Analysis framework, whereby alternative 
@@ -27,7 +25,7 @@ This mainly a frontend application, which can execute be used locally on the use
  - Select: this selects the app that the user wants to utilize. The display of apps are mutually exclusive - meaning no two apps will display at the same time.
  - onload() : this event listener makes sure that the select element is ready to be selected.
  - onchange() : this event listener makes sure that for every selected index (using a method <select id>.selectedIndex[arrayIndex]), its corresponding app displays, and is         ready for use.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##
  - Iteration: for let loops are used to call the children nodes (all inputs) of the four parent node (form) elements.
      Two forms must be filled with strategy keywords, to enable interaction between their values, and thus produce alternative
      strategies in its designated quadrant (div). 
@@ -46,14 +44,13 @@ This mainly a frontend application, which can execute be used locally on the use
 - The results of this recommendation are returned in the regex drawing from the matching of keywords between any two form input elements.
 - Generally, the algorithm tools deployed are: if - else conditionals, match(), and for - let loops.
     
- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
+##    
  ## Challenges:
     Generating the strategy patterns for the SWOT app requires strategic exposure and consideration for what makes business sense in the real world.
     So, it takes time to generate each unique strategic recommendation. There are plenty regex involved in the code.
- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ##
     
- ## Key takeaways:
+## Key takeaways:
  - Two or more form elements can share an event listener, so long as there is a common event listener between them.
  - Instead of listing all the inputs and their IDs, it is easier to obtain them through their parent to make the code leaner - like seeking permission
     from a parent before calling their child. 
