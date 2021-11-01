@@ -7,14 +7,12 @@ This app enables users to manipulate marketing data (number and text) in the are
 and marketing strategy. The marketing strategy simulator takes inspiration from the SWOT Analysis framework, whereby alternative 
 strategies are developed by combining or interacting the variables of strengths, weaknesses, opportunities and threats(SWOT).
 
------------------------------------------------------------------------------------------------------------------------------
 
 ## Goals of the app:
 - To calculate marketing numbers
 - To enable users combine different numbers to ascertain their desired metrics.
 - To generate alternative strategies when the user inputs certain strategy keywords (eg. Staff strength, Cost advantage, High digital coverage, Emerging markets etc).
 
-------------------------------------------------------------------------------------------------------------------------------
 
 ## Technologies deployed:
 - HTML
@@ -23,21 +21,20 @@ strategies are developed by combining or interacting the variables of strengths,
 
 This mainly a frontend application, which can execute be used locally on the user's browser.
 
-------------------------------------------------------------------------------------------------------------------------------
 
 ## Key functionalities
 ### Retailing, digital marketing, and sales calculators
-  - Select: this selects the app that the user wants to utilize. The display of apps are mutually exclusive - meaning no two apps will display at the same time.
-  - onload() : this event listener makes sure that the select element is ready to be selected.
-  - onchange() : this event listener makes sure that for every selected index (using a method <select id>.selectedIndex[arrayIndex]), its corresponding app displays, and is         ready for use.
+1. Select: this selects the app that the user wants to utilize. The display of apps are mutually exclusive - meaning no two apps will display at the same time.
+2. onload() : this event listener makes sure that the select element is ready to be selected.
+3. onchange() : this event listener makes sure that for every selected index (using a method <select id>.selectedIndex[arrayIndex]), its corresponding app displays, and is         ready for use.
  
 ### SWOT
-  - Iteration: for let loops are used to call the children nodes (all inputs) of the four parent node (form) elements.
+ 1. Iteration: for let loops are used to call the children nodes (all inputs) of the four parent node (form) elements.
      Two forms must be filled with strategy keywords, to enable interaction between their values, and thus produce alternative
      strategies in its designated quadrant (div). 
-  - 'Change' eventlisteners are used to trigger the interaction between the forms in the SWOT matrix.
-  - The SWOT alternative strategies are generated through the interaction of values in this combination:
-     - The input values of "Strengths" vs "Opportunities" backed up by regular expressions (regex) that contains alternative InnerHTML to render on the corresponding quadrants.
+ 2. 'Change' eventlisteners are used to trigger the interaction between the forms in the SWOT matrix.
+    2.1 The SWOT alternative strategies are generated through the interaction of values in this combination:
+    2.2The input values of "Strengths" vs "Opportunities" backed up by regular expressions (regex) that contains alternative InnerHTML to render on the corresponding quadrants.
      - The input values of "Weaknesses" vs "Opportunities" ___________Same as abaove___________________
      - The input values of "Strengths" vs "Threats" ________Same as above________________
      - The input values of "Weaknesses" vs "Threats" _________Same as above______________
