@@ -1,6 +1,6 @@
 # Kotler
 
-1. Introduction
+##
 
 Kotler analyzes marketing numbers and performs SWOT analsysis for the generation of alternative strategies.
 This app enables users to manipulate marketing data (number and text) in the areas of retailing, digital marketing, sales,
@@ -9,14 +9,14 @@ strategies are developed by combining or interacting the variables of strengths,
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-2. Goals of the app:
+## Goals of the app:
 - To calculate marketing numbers
 - To enable users combine different numbers to ascertain their desired metrics.
 - To generate alternative strategies when the user inputs certain strategy keywords (eg. Staff strength, Cost advantage, High digital coverage, Emerging markets etc).
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-3. Technologies deployed:
+## Technologies deployed:
 - HTML
 - CSS
 - JavaScript
@@ -25,13 +25,13 @@ This mainly a frontend application, which can execute be used locally on the use
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-4. Key functionalities:
-4.1 Retailing, digital marketing, and sales calculators:
+## Key functionalities
+### Retailing, digital marketing, and sales calculators
   - Select: this selects the app that the user wants to utilize. The display of apps are mutually exclusive - meaning no two apps will display at the same time.
   - onload() : this event listener makes sure that the select element is ready to be selected.
   - onchange() : this event listener makes sure that for every selected index (using a method <select id>.selectedIndex[arrayIndex]), its corresponding app displays, and is         ready for use.
  
-4.2 SWOT:
+### SWOT
   - Iteration: for let loops are used to call the children nodes (all inputs) of the four parent node (form) elements.
      Two forms must be filled with strategy keywords, to enable interaction between their values, and thus produce alternative
      strategies in its designated quadrant (div). 
@@ -52,12 +52,12 @@ This mainly a frontend application, which can execute be used locally on the use
     
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
- 5. Challenges:
+ ## Challenges:
     Generating the strategy patterns for the SWOT app requires strategic exposure and consideration for what makes business sense in the real world.
     So, it takes time to generate each unique strategic recommendation. There are plenty regex involved in the code.
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
- 6. Key takeaways:
+ ## Key takeaways:
  - Two or more form elements can share an event listener, so long as there is a common event listener between them.
  - Instead of listing all the inputs and their IDs, it is easier to obtain them through their parent to make the code leaner - like seeking permission
     from a parent before calling their child. 
