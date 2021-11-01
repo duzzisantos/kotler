@@ -26,12 +26,12 @@ This mainly a frontend application, which can execute be used locally on the use
 ------------------------------------------------------------------------------------------------------------------------------
 
 4. Key functionalities:
- - Retailing, digital marketing, and sales calculators:
+4.1 Retailing, digital marketing, and sales calculators:
   - Select: this selects the app that the user wants to utilize. The display of apps are mutually exclusive - meaning no two apps will display at the same time.
   - onload() : this event listener makes sure that the select element is ready to be selected.
   - onchange() : this event listener makes sure that for every selected index (using a method <select id>.selectedIndex[arrayIndex]), its corresponding app displays, and is         ready for use.
  
- - SWOT:
+4.2 SWOT:
   - Iteration: for let loops are used to call the children nodes (all inputs) of the four parent node (form) elements.
      Two forms must be filled with strategy keywords, to enable interaction between their values, and thus produce alternative
      strategies in its designated quadrant (div). 
