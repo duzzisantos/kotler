@@ -48,7 +48,7 @@ This mainly a frontend application, which can execute be used locally on the use
 ##    
  ## Challenges:
     Generating the strategy patterns for the SWOT app requires strategic exposure and consideration for what makes business sense in the real world.
-    So, it takes time to generate each unique strategic recommendation. There are plenty regex involved in the code.
+    So, it takes time to generate each unique strategic recommendation. There are plenty regular expressions involved in the code.
  ##
     
 ## Key takeaways:
